@@ -1,3 +1,9 @@
+# revision 23492
+# category Package
+# catalog-ctan /macros/latex/contrib/pdfmarginpar
+# catalog-date 2011-08-10 11:12:20 +0200
+# catalog-license gpl
+# catalog-version 0.92
 Name:		texlive-pdfmarginpar
 Version:	0.92
 Release:	1
@@ -50,6 +56,7 @@ is not obscured.
 %doc %{_texmfdistdir}/doc/latex/pdfmarginpar/pdfmarginparexample.tex
 %doc %{_texmfdistdir}/doc/latex/pdfmarginpar/pgfmanual-en-macros.tex
 %doc %{_texmfdistdir}/doc/latex/pdfmarginpar/pgfplots-macros.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -60,3 +67,5 @@ is not obscured.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
