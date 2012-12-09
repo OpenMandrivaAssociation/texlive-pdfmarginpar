@@ -57,3 +57,17 @@ is not obscured.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.92-2
++ Revision: 754762
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.92-1
++ Revision: 719220
+- texlive-pdfmarginpar
+- texlive-pdfmarginpar
+- texlive-pdfmarginpar
+- texlive-pdfmarginpar
+
