@@ -6,7 +6,7 @@
 # catalog-version 0.92
 Name:		texlive-pdfmarginpar
 Version:	0.92
-Release:	3
+Release:	4
 Summary:	Generate marginpar-equivalent PDF annotations
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pdfmarginpar
