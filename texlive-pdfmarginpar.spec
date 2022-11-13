@@ -1,18 +1,12 @@
-# revision 23492
-# category Package
-# catalog-ctan /macros/latex/contrib/pdfmarginpar
-# catalog-date 2011-08-10 11:12:20 +0200
-# catalog-license gpl
-# catalog-version 0.92
 Name:		texlive-pdfmarginpar
-Version:	0.92
-Release:	11
+Version:	23492
+Release:	1
 Summary:	Generate marginpar-equivalent PDF annotations
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pdfmarginpar
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pdfmarginpar.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pdfmarginpar.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pdfmarginpar.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pdfmarginpar.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -29,12 +23,12 @@ together when viewing the document, while the document itself
 is not obscured.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -50,24 +44,10 @@ is not obscured.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.92-2
-+ Revision: 754762
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.92-1
-+ Revision: 719220
-- texlive-pdfmarginpar
-- texlive-pdfmarginpar
-- texlive-pdfmarginpar
-- texlive-pdfmarginpar
-
