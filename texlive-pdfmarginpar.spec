@@ -1,6 +1,6 @@
 Name:		texlive-pdfmarginpar
 Version:	23492
-Release:	1
+Release:	2
 Summary:	Generate marginpar-equivalent PDF annotations
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/pdfmarginpar
